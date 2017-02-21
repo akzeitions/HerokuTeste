@@ -15,6 +15,7 @@
         <jersey.version>2.24</jersey.version>
     </properties>
 
+
     <dependencies>
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
@@ -192,22 +193,27 @@
                 </executions>
             </plugin>
             <plugin>
-                <groupId>org.eclipse.jetty</groupId>
-                <artifactId>jetty-maven-plugin</artifactId>
-                <version>9.2.19.v20160908</version>
-            </plugin>
-            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
-                <version>2.10</version>
+                <version>2.3</version>
                 <executions>
                     <execution>
                         <phase>package</phase>
                         <goals>
+                            <goal>copy</goal>
                             <goal>copy-dependencies</goal>
                         </goals>
                         <configuration>
                             <outputDirectory>${project.build.directory}/lib</outputDirectory>
                             <includeScope>runtime</includeScope>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>org.eclipse.jetty</groupId>
+                                    <artifactId>jetty-maven-plugin</artifactId>
+                                    <version>9.2.19.v20160908</version>
+                                    <destFileName>jetty-runner.jar</destFileName>
+                                </artifactItem>
+                            </artifactItems>
                         </configuration>
                     </execution>
                 </executions>
