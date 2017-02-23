@@ -20,7 +20,7 @@ COPY ./tmp/web /opt/traccar/web
 COPY ./tmp/lib /opt/traccar/lib
 COPY ./tmp/traccar-server.jar /opt/traccar/traccar-server.jar
 
-EXPOSE 8082
+EXPOSE 8080
 EXPOSE 5000-5150
 
 WORKDIR /opt/traccar

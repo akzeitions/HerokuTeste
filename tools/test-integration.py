@@ -63,7 +63,7 @@ messages = {
     'watch' : '[SG*123456*0087*UD,220414,134652,A,22.571707,N,113.8613968,E,0.1,0.0,100,7,60,90,1000,50,0000,4,1,460,0,9360,4082,131,9360,4092,148,9360,4091,143,9360,4153,141]'
 }
 
-baseUrl = 'http://localhost:8082'
+baseUrl = 'http://localhost:8080'
 user = { 'email' : 'admin', 'password' : 'admin' }
 
 debug = '-v' in sys.argv

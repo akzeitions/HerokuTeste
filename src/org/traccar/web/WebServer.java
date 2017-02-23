@@ -55,7 +55,7 @@ public class WebServer {
     private void initServer() {
 
         String address = config.getString("web.address");
-        int port = config.getInteger("web.port", 8082);
+        int port = config.getInteger("web.port", 8080);
         if (address == null) {
             server = new Server(port);
         } else {

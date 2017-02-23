@@ -292,7 +292,7 @@ public final class Context {
                     "org.apache.velocity.runtime.log.NullLogChute");
 
             String address = config.getString("web.address", InetAddress.getLocalHost().getHostAddress());
-            int port = config.getInteger("web.port", 8082);
+            int port = config.getInteger("web.port", 8080);
             String webUrl = URIUtil.newURI("http", address, port, "", "");
             webUrl = Context.getConfig().getString("web.url", webUrl);
             velocityProperties.setProperty("web.url", webUrl);
